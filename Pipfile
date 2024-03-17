@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 numpy = "*"
+pandas = "==2.2.0"
 
 [dev-packages]
 
