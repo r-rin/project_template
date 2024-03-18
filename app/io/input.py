@@ -1,6 +1,7 @@
 from os import path
 from pandas import read_csv
 
+
 def console_in(prompt_message):
     '''
     Prompts the user to input data from the console. 
@@ -59,8 +60,7 @@ def pandas_read_file(file_path):
         file_path (string): path to a file to read.
     
     Returns:
-        list of str: data from a file located in `file_path`.
-                     Each element in a list represents a separate line.
+        str: data from a file located in `file_path`.
     '''
     if not isinstance(file_path, str):
         raise TypeError("type of a file_path is not string")
@@ -72,4 +72,4 @@ def pandas_read_file(file_path):
         raise ValueError("the file must have a .csv extension.")
     
     pd_file = read_csv(file_path)
-    return pd_file.to_string
+    return pd_file.to_string()
